@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  #  Link the domain (input by the user) to an appropriate controller:
+  resources :users
+
+  #  Define a path for signup:
+  get 'signup' => 'users#new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
