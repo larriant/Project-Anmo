@@ -2,5 +2,6 @@
   <%= link_to activity.activity_name, activity %>
   <%= link_to "delete", activity, method: :delete,
                                     data: { confirm: "You Sure?" } %>
+
   <%= link_to "edit", [:edit, activity] %>
 </li>
