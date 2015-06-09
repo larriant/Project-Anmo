@@ -45,7 +45,7 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity). permit(:activity_name, :importance, :user_id)
+    params.require(:activity). permit(:activity_name, :importance, :frequency, :activity_type, :start_time, :end_time, :completion_date, :user_id)
   end
 
 end
