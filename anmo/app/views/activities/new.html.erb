@@ -1,0 +1,32 @@
+<%= provide(:title, 'New event') %>
+<h1>Create activity</h1>
+
+<%= form_for(@activity) do |f| %>
+  <%= render 'shared/activity_error_messages' %>
+
+  <%= f.label :activity_name %>
+  <%= f.text_field :activity_name %>
+  
+  <%= f.label :activity_type %>
+  <%= f.text_field :activity_type%>
+
+  <%= f.label :importance %>
+  <%= f.number_field :importance %>
+
+  <%= f.label :frequency %>
+  <%= f.number_field :frequency %>
+
+  <%= f.label :start_time, "Start time:" %>
+  <%= f.time_select :start_time %>
+
+  <%= f.label :end_time, "End time:" %>
+  <%= f.time_select :end_time %>
+
+  <%= f.label :completion_date, "Completion date:" %>
+  <%= f.date_select :completion_date %>
+
+  <%= f.submit "Create activity" %>
+
+<% end %>
+
+

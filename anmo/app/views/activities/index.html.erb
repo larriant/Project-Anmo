@@ -1,0 +1,8 @@
+<% provide(:title, 'All activities') %>
+<h1>All activities</h1>
+
+<ul>
+  <% @activities.each do |activity| %>
+    <%= render activity %>
+  <% end %>
+</ul>
