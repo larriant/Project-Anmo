@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
 
   def show
-    @user = User. find(params[:id])
+    @user = User.find(params[:id])
   end
 
+  #  Define the structure of the "new" form:
   def new
     @user = User.new
   end
