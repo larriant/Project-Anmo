@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  get 'events/new'
+
   root 'static_pages#index'
 
   get 'sessions/new'
 
-  #  Link the domain (input by the user) to an appropriate controller:
+  #  Link the domains (input by the user) appropriate controllers:
   resources :users
+  resources :events
 
   #  Define a path for signup:
   get 'signup' => 'users#new'

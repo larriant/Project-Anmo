@@ -1,0 +1,18 @@
+<% provide(:title, "Edit event") %>
+<h1>Update event</h1>
+
+<%= form_for(@event) do |f| %>
+  <%= render 'shared/event_error_messages' %>
+
+  <%= f.label :event_name %>
+  <%= f.text_field :event_name %>
+
+  <%= f.label :start_time , "Edit start time" %>
+  <%= f.time_select :start_time%>
+
+  <%= f.label :end_time, "Edit end time" %>
+  <%= f.time_select :end_time %>
+
+  <%= f.submit "Save changes" %>
+
+<% end %>

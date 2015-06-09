@@ -1,0 +1,18 @@
+<%= provide(:title, 'New event') %>
+<h1>Create event</h1>
+
+<%= form_for(@event) do |f| %>
+    <%= render 'shared/event_error_messages' %>
+
+    <%= f.label :event_name %>
+    <%= f.text_field :event_name %>
+
+    <%= f.label :start_time, "Start time:" %>
+    <%= f.time_select :start_time  %>
+
+    <%= f.label :end_time, "End time:" %>
+    <%= f.time_select :end_time  %>
+  
+    <%= f.submit "Create event" %>
+
+<% end %>
