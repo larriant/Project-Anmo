@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
 
+  before_action :logged_in_user
+
   def show
     @event = Event.find(params[:id])
   end
@@ -48,6 +50,13 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:event_name, :user_id, :start_time, :end_time)
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = "You must be a user to edit events."
+      redirect_to root_url
+    end
   end
 
 end
