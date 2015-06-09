@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   #  Link the domains (input by the user) appropriate controllers:
   resources :users
   resources :events
+  resources :activities
 
   #  Define a path for signup:
   get 'signup' => 'users#new'
