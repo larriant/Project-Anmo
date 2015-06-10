@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610085544) do
+ActiveRecord::Schema.define(version: 20150610105139) do
 
   create_table "activities", force: :cascade do |t|
     t.string   "activity_name"
@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20150610085544) do
     t.boolean  "completed"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "activity_id"
+    t.boolean  "one_off",     default: false
   end
 
   create_table "users", force: :cascade do |t|
