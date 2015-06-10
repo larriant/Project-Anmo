@@ -1,0 +1,7 @@
+<li>
+  <%= link_to event.event_name, event %>
+  <%= link_to "delete", event, method: :delete,
+                                 data: { confirm: "You Sure?" } %>
+
+  <%= link_to "edit", [:edit, event] %>
+</li>
