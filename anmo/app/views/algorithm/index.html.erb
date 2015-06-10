@@ -1,7 +1,20 @@
 <% provide(:title, 'Algorithm Output') %>
 
 <h1> Algorithm Output </h1>
-<%= @time %>
+
+<ul>
+  <% @events_output.each do |time, event| %>
+    <li>
+    <%= time.hour  %>:<%= time.min %> 
+    <% if event == "" %>
+      <% next %>
+    <% else %>
+      <%= event.event_name %>    
+    <% end %>
+    </li>
+  <% end %> 
+</ul>
+
 <ul>
   <% @events.each do |event| %>
     <%= render event %>
