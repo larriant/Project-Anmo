@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-
   root 'static_pages#index'
+  
+  get 'algorithm' => 'algorithm#index'
 
   #  Link the domains (input by the user) appropriate controllers:
   resources :users
