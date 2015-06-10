@@ -51,11 +51,11 @@ class ActivitiesController < ApplicationController
     params.require(:activity). permit(:activity_name, :importance, :frequency, :activity_type, :start_time, :end_time, :completion_date, :user_id)
   end
 
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = "You must be a user to edit activities."
-      redirect_to root_url
-    end
-  end
+#  def logged_in_user
+#    unless logged_in?
+#      flash[:danger] = "You must be a user to edit activities."
+#      redirect_to root_url
+#    end
+#  end
 
 end
