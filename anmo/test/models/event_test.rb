@@ -4,7 +4,8 @@ class EventTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:michael)
-    @event = @user.events.build(event_name: "[test event name]")
+    @activity = @user.activities.build(activity_name: "[test activity name]") 
+    @event = @activity.events.build(event_name: "[test event name]", :user=>@user)
   end
 
   test "should be valid" do
