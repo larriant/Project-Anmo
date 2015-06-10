@@ -1,0 +1,9 @@
+<% provide(:title, 'Algorithm Output') %>
+
+<h1> Algorithm Output </h1>
+<%= @time %>
+<ul>
+  <% @events.each do |event| %>
+    <%= render event %>
+  <% end %>
+</ul>
