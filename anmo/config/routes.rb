@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'events/new'
-
   root 'static_pages#index'
-
-  get 'sessions/new'
 
   #  Link the domains (input by the user) appropriate controllers:
   resources :users
