@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :activities
+  resources :account_activations, only: [:edit]
 
   #  Define a path for signup:
   get 'signup' => 'users#new'
