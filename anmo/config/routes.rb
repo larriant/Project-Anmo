@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   root 'static_pages#index'
   
   get 'algorithm' => 'algorithm#index'
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
   resources :events
   resources :activities
   resources :account_activations, only: [:edit]
+  resources :password_resets, only: [:new, :create, :edit, :update]
 
   #  Define a path for signup:
   get 'signup' => 'users#new'
